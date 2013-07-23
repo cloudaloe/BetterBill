@@ -46,6 +46,11 @@
   </body>
   <script>
   
+  	  // temporary demo hack
+  	  function getTop(){ 
+  	    return sizes.indexOf(Math.max.apply(Math, sizes));
+  	  }
+  
 	  var route1 = [
 		  [480, 100],
 		  [580, 300],
@@ -57,8 +62,8 @@
 		];
 		
 	  var route2 = [ // TODO: fully parameterize this
-	  	  [10,		100],
-	  	  [741-10,  450-100]
+	  	  [40,		100],
+	  	  [741-40,  450-100]
 	  	]
 		
 	  var svg = d3.select("svg");
@@ -73,7 +78,7 @@
 	  
 	  var Logos = 10;
 	  
-	  var firstLogo = path.node().getPointAtLength(pathLen/(Logos-1));
+	  //var firstLogo = path.node().getPointAtLength(pathLen/(Logos-1));
 	  
 	  var logos=["logos/EE-70x65.jpg",
 	  			 "logos/images.jpg",
